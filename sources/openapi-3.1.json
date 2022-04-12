@@ -1,0 +1,95 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/api": {
+      "get": {
+        "operationId": "AppController_main",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/user/find": {
+      "post": {
+        "operationId": "UserController_findUser",
+        "summary": "查询某一个 user",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/user/register": {
+      "post": {
+        "operationId": "UserController_register",
+        "summary": "注册 user",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        }
+      }
+    }
+  },
+  "info": {
+    "title": "管理后台",
+    "description": "管理后台接口文档",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http"
+      }
+    },
+    "schemas": {
+      "CreateUserDto": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "type": "string",
+            "description": "账户"
+          },
+          "name": {
+            "type": "string",
+            "description": "用户名"
+          },
+          "passwd": {
+            "type": "string",
+            "description": "密码"
+          },
+          "rePasswd": {
+            "type": "string",
+            "description": "确认密码"
+          },
+          "tel": {
+            "type": "string",
+            "description": "手机号"
+          }
+        },
+        "required": ["account", "name", "passwd", "rePasswd", "tel"]
+      }
+    }
+  }
+}

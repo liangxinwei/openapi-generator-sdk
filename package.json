@@ -1,0 +1,31 @@
+{
+  "name": "openapi-generator-sdk",
+  "version": "0.0.0",
+  "description": "openapi-generator-sdk",
+  "private": true,
+  "scripts": {
+    "sdk": "node ./src/index.js ./sources/openapi-3.1.json ./build",
+    "postsdk": "yarn prettier",
+    "prettier": "prettier --write \"build/**/*\" --loglevel silent"
+  },
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "swagger-js-codegen": "^1.13.0",
+    "handlebars": "^4.7.7",
+    "lodash-es": "^4.17.21",
+    "humps": "^2.0.1",
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-import-resolver-alias": "1.1.2",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "extract-comments": "^1.1.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2"
+  }
+}

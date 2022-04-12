@@ -1,0 +1,8 @@
+**/*.svg
+**/*.ejs
+**/*.html
+package.json
+node_modules
+**/__mocks__/*
+**/dist/*
+**/public/*

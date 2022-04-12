@@ -1,0 +1,8 @@
+**/dist/*
+**/.next/*
+**/static/
+/.idea/
+/.vscode/
+/coverage/
+**/__mocks__/*
+**/public/*
